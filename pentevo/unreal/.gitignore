@@ -1,0 +1,6 @@
+.vs*
+*.user
+build
+bin/Debug
+bin/Release
+tmp

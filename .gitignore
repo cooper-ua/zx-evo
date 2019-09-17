@@ -13,9 +13,4 @@ pentevo/specs/*
 pentevo/test/*
 pentevo/test_n_service/*
 pentevo/tools/*
-pentevo/unreal/.vs*
-pentevo/unreal/*.user*
-pentevo/unreal/*/bin/Debug/**
-pentevo/unreal/*/bin/Release/**
-pentevo/unreal/*/tmp/**
 reverse/*

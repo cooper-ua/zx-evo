@@ -107,7 +107,7 @@ void savesnddialog()
       OPENFILENAME ofn = { 0 };
       char sndsavename[0x200]; *sndsavename = 0;
 
-      ofn.lStructSize = (WinVerMajor < 5) ? OPENFILENAME_SIZE_VERSION_400 : sizeof(OPENFILENAME);
+      ofn.lStructSize = sizeof(OPENFILENAME);
       ofn.lpstrFilter = "All sound (WAV)\0*.wav\0AY sound (VTX)\0*.vtx\0";
       ofn.lpstrFile = sndsavename; ofn.nMaxFile = sizeof sndsavename;
       ofn.lpstrTitle = "Save Sound";

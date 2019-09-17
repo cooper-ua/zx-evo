@@ -62,7 +62,7 @@ char select_romfile(char *dstname)
        *x = 0;
 */
    OPENFILENAME ofn = { 0 };
-   ofn.lStructSize = (WinVerMajor < 5) ? OPENFILENAME_SIZE_VERSION_400 : sizeof(OPENFILENAME);
+   ofn.lStructSize = sizeof(OPENFILENAME);
    ofn.hwndOwner = dlg;
    ofn.lpstrFilter = "ROM image (*.ROM)\0*.ROM\0All files\0*.*\0";
    ofn.lpstrFile = fname;
@@ -570,7 +570,7 @@ void HddDlg_select_image(int device)
    if (textbuf[0] == '<') *textbuf = 0;
 */
    textbuf[0] = 0;
-   fn.lStructSize = (WinVerMajor < 5) ? OPENFILENAME_SIZE_VERSION_400 : sizeof(OPENFILENAME);
+   fn.lStructSize = sizeof(OPENFILENAME);
    fn.hwndOwner = dlg;
    fn.lpstrFilter = "Hard disk drive image (*.HDD)\0*.HDD\0";
    fn.lpstrFile = textbuf;
@@ -1024,7 +1024,7 @@ upd:  for (int i = 0; i < sizeof slider/sizeof*slider; i++) {
              *ptr == '?' || *ptr == '/' || *ptr == '\\' ||
              *ptr == '"' || *ptr == ':' || *ptr == '*' || *(u8*)ptr < ' ')
             *ptr = ' ';
-      ofn.lStructSize = (WinVerMajor < 5) ? OPENFILENAME_SIZE_VERSION_400 : sizeof(OPENFILENAME);
+      ofn.lStructSize = sizeof(OPENFILENAME);
       ofn.lpstrFilter = "Amiga music module (MOD)\0*.mod\0";
       ofn.lpstrFile = fname; ofn.nMaxFile = sizeof fname;
       ofn.lpstrTitle = "Save music from GS";

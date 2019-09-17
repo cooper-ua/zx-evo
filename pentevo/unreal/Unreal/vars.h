@@ -130,14 +130,10 @@ extern char *ayvols[64];
 extern unsigned num_ayvols;
 extern unsigned num_aystereo;
 
-extern DWORD WinVerMajor;
-extern DWORD WinVerMinor;
-
 extern HWND wnd;
 extern HWND dlg;
 extern HINSTANCE hIn;
 extern HWND debug_wnd;
-extern unsigned nowait;
 
 extern action ac_main[];
 extern action ac_main_xt[];

@@ -672,9 +672,7 @@ static INT_PTR CALLBACK WndProc(HWND hwnd,UINT uMessage,WPARAM wparam,LPARAM lpa
       case SCU_SCALE3: temp.scale = 3; wnd_resize(3);  return 0;
       case SCU_SCALE4: temp.scale = 4; wnd_resize(4);  return 0;
       case SCU_LOCK_MOUSE: main_mouse();  return 0;
-      case SC_CLOSE:
-          if (ConfirmExit())
-              correct_exit();
+      case SC_CLOSE:    correct_exit();
       return 0;
       case SC_MINIMIZE: temp.Minimized = true; break;
 

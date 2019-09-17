@@ -458,7 +458,6 @@ void correct_exit()
 
    DeleteCriticalSection(&tsu_toggle_cr);
 
-   nowait = 1;
    normal_exit = true;
    exit();
 }

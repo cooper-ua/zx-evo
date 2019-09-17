@@ -653,14 +653,11 @@ u8 watch_enabled[4];
 u8 used_banks[MAX_PAGES];
 u8 trace_rom=1, trace_ram=1;
 
-DWORD WinVerMajor;
-DWORD WinVerMinor;
 HWND dlg; // used in setcheck/getcheck: gui settings, monitor dialogs
 
 HBITMAP hbm;  // bitmap for repaint background
 DWORD bm_dx, bm_dy;
 DWORD mousepos;  // left-clicked point in monitor
-unsigned nowait; // don't close console window after error if started from GUI
 bool normal_exit = false; // true on correct exit, false on failure exit
 
 char *ayvols[64]; unsigned num_ayvols;

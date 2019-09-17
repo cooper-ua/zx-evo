@@ -219,7 +219,7 @@ void mon_tool()
 	if (ripper) {
 		OPENFILENAME ofn = { 0 };
 		char savename[0x200]; *savename = 0;
-		ofn.lStructSize = (WinVerMajor < 5) ? OPENFILENAME_SIZE_VERSION_400 : sizeof(OPENFILENAME);
+		ofn.lStructSize = sizeof(OPENFILENAME);
 		ofn.lpstrFilter = "Memory dump\0*.bin\0";
 		ofn.lpstrFile = savename; ofn.nMaxFile = sizeof savename;
 		ofn.lpstrTitle = "Save ripped data";

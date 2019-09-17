@@ -7,19 +7,23 @@ add_definitions(
 )
 
 file(GLOB HEADERS
-    
+	${CMAKE_CURRENT_SOURCE_DIR}/*.h
 	${CMAKE_CURRENT_SOURCE_DIR}/sound/*.h
 	${CMAKE_CURRENT_SOURCE_DIR}/debugger/*.h
+	${CMAKE_CURRENT_SOURCE_DIR}/emul/*.h
 )
 
 file(GLOB SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/sound/*.cpp
 	${CMAKE_CURRENT_SOURCE_DIR}/debugger/*.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/emul/*.cpp
 )
 
 include_directories(
 	${CMAKE_CURRENT_SOURCE_DIR}
+	${CMAKE_CURRENT_SOURCE_DIR}/emul
+	${CMAKE_CURRENT_SOURCE_DIR}/../rang/include
 )
 
 link_directories(

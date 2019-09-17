@@ -264,12 +264,6 @@ void load_config(const char *fname)
    GetPrivateProfileString(misc, "Help",  "help_eng.html", helpname, sizeof helpname, ininame);
    addpath(helpname);
 
-   if (GetPrivateProfileInt(misc, "HideConsole", 0, ininame))
-   {
-       FreeConsole();
-       nowait = 1;
-   }
-
    conf.ConfirmExit = GetPrivateProfileInt(misc, "ConfirmExit", 0, ininame);
 
    conf.sleepidle = GetPrivateProfileInt(misc, "ShareCPU", 0, ininame);

@@ -373,7 +373,7 @@ void FontFromFile(HWND dlg)
    OPENFILENAME ofn = { 0 };
    char fname[0x200]; *fname = 0;
 
-   ofn.lStructSize = (WinVerMajor < 5) ? OPENFILENAME_SIZE_VERSION_400 : sizeof(OPENFILENAME);
+   ofn.lStructSize = sizeof(OPENFILENAME);
    ofn.hwndOwner = dlg;
    ofn.lpstrFilter = "font files (*.FNT,*.FNX)\0*.fnt;*.fnx\0All files\0*.*\0";
    ofn.lpstrFile = fname; ofn.nMaxFile = sizeof fname;

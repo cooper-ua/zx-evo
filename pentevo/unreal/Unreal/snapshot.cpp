@@ -630,7 +630,7 @@ void opensnap(int index)
    char fname[0x200]; *fname = 0;
    char dir[0x200]; GetCurrentDirectory(sizeof dir, dir);
 
-   ofn.lStructSize = (WinVerMajor < 5) ? OPENFILENAME_SIZE_VERSION_400 : sizeof(OPENFILENAME);
+   ofn.lStructSize = sizeof(OPENFILENAME);
    ofn.hwndOwner = GetForegroundWindow();
    ofn.lpstrFilter = fline;
    ofn.lpstrFile = fname; ofn.nMaxFile = sizeof fname;
@@ -677,7 +677,7 @@ again:
       addref(ptr, snSNA_128, "ZX-Spectrum 128K snapshot (SNA)\0*.sna", -1, WORD4('s','n','a',0));
    }
 
-   ofn.lStructSize = (WinVerMajor < 5) ? OPENFILENAME_SIZE_VERSION_400 : sizeof(OPENFILENAME);
+   ofn.lStructSize = sizeof(OPENFILENAME);
    ofn.nFilterIndex = 1;
 
    if (conf.trdos_present)

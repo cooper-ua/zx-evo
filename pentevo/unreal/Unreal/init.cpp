@@ -175,13 +175,7 @@ void __declspec(noreturn) exit()
 
    color();
    printf("\nsee you later!\n");
-   if (!nowait)
-   {
-       SetConsoleTitle("press a key...");
-       FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE));
-       getch();
-   }
+   
    fflush(stdout);
-   SetConsoleCtrlHandler(ConsoleHandler, FALSE);
    exit(0);
 }
